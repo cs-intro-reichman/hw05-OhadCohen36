@@ -62,11 +62,11 @@ public class GameOfLife {
 		In in = new In(fileName); // Constructs an In object for reading the input file
 		int rows = Integer.parseInt(in.readLine());
 		int cols = Integer.parseInt(in.readLine());
-		int[][] board = new int[rows][cols];
+		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
-		for (int i = 0; i < rows; i++) {
+		for (int i = 0; i < rows + 2; i++) {
 			String line = in.readLine();
-			for (int j = 0; j < cols; j++) {
+			for (int j = 0; j < cols + 2; j++) {
 				if (i == 0 || j == 0) {
 					board[i][j] = 0;
 				}
@@ -186,8 +186,8 @@ public class GameOfLife {
 	// representing cells.
 	public static void show(int[][] board) {
 		StdDraw.setCanvasSize(900, 900);
-		int rows = board.length;
-		int cols = board[0].length;
+		int rows = board.length - 2;
+		int cols = board[0].length - 2;
 		StdDraw.setXscale(0, cols);
 		StdDraw.setYscale(0, rows);
 
