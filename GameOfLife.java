@@ -120,16 +120,14 @@ public class GameOfLife {
 		{
 			if (count < 2){
 				return 0;
-			}
-			else if (count == 2 || count == 3){
-				return 1;
-			}
-			else if (count > 3)
-			{
+			} else if (count > 3) {
 				return 0;
+			} else if (count == 2){
+				return 1;
+			} else if (count == 3){
+				return 1
 			}
-		}
-		else if (board[i][j] == 0){
+		} else if (board[i][j] == 0){
 			if (count == 3) {
 				return 1;
 			}
