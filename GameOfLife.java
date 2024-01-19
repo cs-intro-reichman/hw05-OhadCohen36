@@ -125,7 +125,7 @@ public class GameOfLife {
 			} else if (count == 2){
 				return 1;
 			} else if (count == 3){
-				return 1
+				return 1;
 			}
 		} else if (board[i][j] == 0){
 			if (count == 3) {
