@@ -103,13 +103,10 @@ public class GameOfLife {
 		int count = count(board, i, j);
 		if (board[i][j] == 1)
 		{
-			if (count < 2){
+			if (count < 2 || count > 3){
 				return 0;
-			} else if (count > 3) {
-				return 0;
-			} else if (count == 2){
-				return 1;
-			} else if (count == 3){
+			}
+			else if (count == 2 || count == 3){
 				return 1;
 			}
 		} else if (board[i][j] == 0){
@@ -117,7 +114,7 @@ public class GameOfLife {
 				return 1;
 			}
 		}
-		return 0;
+		return board[i],[j];
 	}
 
 	// Counts and returns the number of living neighbors of the given cell
@@ -156,11 +153,10 @@ public class GameOfLife {
 
 	// Prints the board. Alive and dead cells are printed as 1 and 0, respectively.
 	public static void print(int[][] arr) {
-		for (int rows = 0; rows < arr.length; rows++) {
-			for (int cols = 0; cols < arr[0].length; cols++) {
-				System.out.printf("%3s", arr[rows][cols]);
-			}
-			System.out.println();
+		for(int i=1 ; i<arr.length-1 ; i++) {
+			for(int j=1 ; j<arr[0].length-1 ; j++)
+				System.out.printf("  %d", arr[i][j]);
+			System.out.printf("%n");
 		}
 	}
 
