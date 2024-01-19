@@ -186,8 +186,8 @@ public class GameOfLife {
 	// representing cells.
 	public static void show(int[][] board) {
 		StdDraw.setCanvasSize(900, 900);
-		int rows = board.length - 2;
-		int cols = board[0].length - 2;
+		int rows = board.length;
+		int cols = board[0].length;
 		StdDraw.setXscale(0, cols);
 		StdDraw.setYscale(0, rows);
 
