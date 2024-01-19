@@ -114,7 +114,7 @@ public class GameOfLife {
 				return 1;
 			}
 		}
-		return board[i],[j];
+		return board[i][j];
 	}
 
 	// Counts and returns the number of living neighbors of the given cell
